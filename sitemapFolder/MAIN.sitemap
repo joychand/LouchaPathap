@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="" title=""  description="This is the root menu">
+
+	<siteMapNode url="~/intHome.aspx"   title="Home"  description="Homepage" />
+		
+		<siteMapNode url="~/queryROR.aspx"   title="PattaQuery"  description="Patta details" />
+		<!--<siteMapNode url="~/queryDeed.aspx" title="RegistrationQuery"  description="Registered document details" />-->
+		<siteMapNode url="~/guidanceLandValue.aspx" title="ComputeLandValuation"  description="Land valuation guidance" />
+		<siteMapNode url="http://manipurrev.nic.in/notification.htm" title="GovernmentOrders"  description="Doslr Static site" target="_blank" />
+		<siteMapNode url="~/users/frmUserLogIn.aspx" title="Login"  description="Log In for SecyRevenue,SDC and CSC users" />
+		
+	</siteMapNode>
+  
+</siteMap>

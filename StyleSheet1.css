@@ -1,0 +1,20 @@
+﻿body	{
+	margin: 5%;
+	padding-top: 1em;
+	font-family: verdana,  @Arial Unicode MS;
+	
+	font-size: 9pt;
+	color: black;
+	background-color: white; 
+	}
+	div#content { 
+	margin-left: 10%; 
+	padding-top: 1em; 
+	border-top: 1px solid #930; 
+     }
+	#printpagebutton
+	{
+		display:none
+	}
+	
+

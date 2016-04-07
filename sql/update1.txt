@@ -1,0 +1,2 @@
+update uniplot set ExNewPatta='' where ExNewPatta is null
+update uniplot set OrdNo='' where OrdNo is null

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="" title=""  description="This is the root menu">
+		<siteMapNode url="~/users/frmLogTrl.aspx"   title="MyLogInfo"  description="LogTrails" />
+		<siteMapNode url="~/users/_SCYREV/srpage.aspx"   title="LandSearch"  description="LandSearch" />
+		<siteMapNode url="~/users/chgpwd.aspx"   title="ChangePassWd"  description="ChangePassWd" />
+
+		<siteMapNode url="~/users/logout.aspx" title="Logout"  description="Log Out to public page" />
+
+	</siteMapNode>
+
+
+</siteMap>

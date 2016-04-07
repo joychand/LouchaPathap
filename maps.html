@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <title>LouchaPathap | Maps</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      body { background: #F5FCFF; color: #333666; }
+      section { text-align: center; margin: 50px 0; }
+      .panzoom-parent { border: 2px solid #333; }
+      .panzoom-parent .panzoom { border: 2px dashed #666; }
+      .buttons { margin: 7px 0 0; }
+	  
+.qwerty {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+    </style>
+    <script type="text/javascript" src="jquery2.js"></script>
+    <script  type="text/javascript"src="jquery.panzoom.min.js"></script>
+    <script  type="text/javascript"src="jquery.mousewheel.js"></script>
+  </head>
+  <body>
+  <div>
+  <div style="float:left; background:#E6E6FA; padding:6px">
+
+<h3>LocationDetail</h3>
+State: Manipur
+<br>
+<br>
+District:
+<select>
+  <option value="volvo">বিষ্ণুপুর</option>
+ 
+</select>
+<br>
+<br>
+Circle:
+<select>
+  <option value="volvo">নম্বোল</option>
+
+</select>
+<br>
+<br>
+Village:
+<select>
+  <option value="volvo">09-নম্বোল বজার</option>
+
+</select>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div>
+	  
+    <section id="focal">
+      <div class="parent">
+	  <img class="qwerty" src="images/direction.png" width="" height="">
+        <div class="panzoom">
+          <img src="images/nambol.png" width="" height="">
+        </div>
+			
+      </div>
+	    <font size="5" color="green"><b>09-নম্বোল বজার</b></font>
+      <div class="buttons">
+        Zoom Map &nbsp;&nbsp;<button class="zoom-in">+</button>
+        <button class="zoom-out">-</button>
+      
+        <button class="reset">Reset</button>
+      </div>
+    </section>
+	</td>
+</div>
+	</div>
+	      <script>
+        (function() {
+          var $section = $('section').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
+          });
+        })();
+		
+		(function() {
+          var $section = $('#focal');
+          var $panzoom = $section.find('.panzoom').panzoom();
+          $panzoom.parent().on('mousewheel.focal', function( e ) {
+            e.preventDefault();
+            var delta = e.delta || e.originalEvent.wheelDelta;
+            var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+            $panzoom.panzoom('zoom', zoomOut, {
+              increment: 0.1,
+              animate: false,
+              focal: e
+            });
+          });
+        })();
+      </script>
+  </body>
+  
+</html>

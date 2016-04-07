@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D884206-E41D-4035-8941-9F9D672F6632}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ponweb</RootNamespace>
+    <AssemblyName>ponweb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ponweb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ponweb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bytescout.BarCodeReader, Version=2.2.0.452, Culture=neutral, PublicKeyToken=f7dd1bd9d40a50eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Bytescout BarCode Reader SDK\net2.00\Bytescout.BarCodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha, Version=2.0.1.36094, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\header.jpg" />
+    <Content Include="queryROR.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\md5Fun.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CtlPublic1.ascx.designer.vb">
+      <DependentUpon>CtlPublic1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtlPublic1.ascx.vb">
+      <DependentUpon>CtlPublic1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtlPublic.ascx.designer.vb">
+      <DependentUpon>CtlPublic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtlPublic.ascx.vb">
+      <DependentUpon>CtlPublic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="users\frmUserLogin.aspx.designer.vb">
+      <DependentUpon>frmUserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\frmUserLogin.aspx.vb">
+      <DependentUpon>frmUserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guidanceLandValue.aspx.designer.vb">
+      <DependentUpon>guidanceLandValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guidanceLandValue.aspx.vb">
+      <DependentUpon>guidanceLandValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\hash\CookieSecurityProvider2.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="users\hash\User.vb" />
+    <Compile Include="IntHome.aspx.designer.vb">
+      <DependentUpon>IntHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IntHome.aspx.vb">
+      <DependentUpon>IntHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="printgridview.aspx.designer.vb">
+      <DependentUpon>printgridview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="printgridview.aspx.vb">
+      <DependentUpon>printgridview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="queryROR.aspx.designer.vb">
+      <DependentUpon>queryROR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="queryROR.aspx.vb">
+      <DependentUpon>queryROR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ChgPwd.aspx.designer.vb">
+      <DependentUpon>ChgPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ChgPwd.aspx.vb">
+      <DependentUpon>ChgPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Chgpwd_Success.aspx.designer.vb">
+      <DependentUpon>Chgpwd_Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Chgpwd_Success.aspx.vb">
+      <DependentUpon>Chgpwd_Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\errorsession.aspx.designer.vb">
+      <DependentUpon>errorsession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\errorsession.aspx.vb">
+      <DependentUpon>errorsession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error_page.aspx.designer.vb">
+      <DependentUpon>error_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error_page.aspx.vb">
+      <DependentUpon>error_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\logout.aspx.designer.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\logout.aspx.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_CSC\BarCode.aspx.designer.vb">
+      <DependentUpon>BarCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_CSC\BarCode.aspx.vb">
+      <DependentUpon>BarCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_CSC\CtlUserCSC.ascx.designer.vb">
+      <DependentUpon>CtlUserCSC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_CSC\CtlUserCSC.ascx.vb">
+      <DependentUpon>CtlUserCSC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_CSC\frmLogTrl_csc.aspx.designer.vb">
+      <DependentUpon>frmLogTrl_csc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_CSC\frmLogTrl_csc.aspx.vb">
+      <DependentUpon>frmLogTrl_csc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_CSC\Jama123.aspx.designer.vb">
+      <DependentUpon>Jama123.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_CSC\Jama123.aspx.vb">
+      <DependentUpon>Jama123.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_CSC\JamaPrint123.aspx.designer.vb">
+      <DependentUpon>JamaPrint123.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_CSC\JamaPrint123.aspx.vb">
+      <DependentUpon>JamaPrint123.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_SCYREV\CtlUserSR.ascx.designer.vb">
+      <DependentUpon>CtlUserSR.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_SCYREV\CtlUserSR.ascx.vb">
+      <DependentUpon>CtlUserSR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_SCYREV\frmLogTrl.aspx.designer.vb">
+      <DependentUpon>frmLogTrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_SCYREV\frmLogTrl.aspx.vb">
+      <DependentUpon>frmLogTrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\_SCYREV\SRpage.aspx.designer.vb">
+      <DependentUpon>SRpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\_SCYREV\SRpage.aspx.vb">
+      <DependentUpon>SRpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\IDAutomationHC39M.ttf" />
+    <None Include="images\IDAutomationHC39M.ttf" />
+    <None Include="images\louchaPSmartw.docx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="bin\Bytescout.BarCodeReader.dll" />
+    <Content Include="bin\MSCaptcha.dll" />
+    <Content Include="Chgpwd_Success.htm" />
+    <Content Include="CtlPublic1.ascx" />
+    <Content Include="CtlPublic.ascx" />
+    <Content Include="errorsession.htm" />
+    <Content Include="error_page.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="images\direction.png" />
+    <Content Include="images\nambol.png" />
+    <Content Include="jquery2.js" />
+    <Content Include="jquery.mousewheel.js" />
+    <Content Include="jquery.panzoom.min.js" />
+    <Content Include="maps.html" />
+    <Content Include="users\frmUserLogin.aspx" />
+    <Content Include="guidanceLandValue.aspx" />
+    <Content Include="images\BgRORDetail.png" />
+    <Content Include="images\BgRORHead.png" />
+    <Content Include="images\ksha.jpg" />
+    <Content Include="images\kshaNew.png" />
+    <Content Include="images\m10.jpg" />
+    <Content Include="images\m11.jpg" />
+    <Content Include="images\m7.jpg" />
+    <Content Include="images\m8.jpg" />
+    <Content Include="images\sessionexpired.png" />
+    <Content Include="images\jamaHead.png" />
+    <Content Include="Index.html" />
+    <Content Include="IntHome.aspx" />
+    <Content Include="printgridview.aspx" />
+    <Content Include="sitemapFolder\userSDC.sitemap" />
+    <Content Include="sitemapFolder\userCSC.sitemap" />
+    <Content Include="images\LockIco.PNG" />
+    <Content Include="images\nic_logo.jpg" />
+    <Content Include="images\head1.jpg" />
+    <Content Include="images\manHouse.jpg" />
+    <Content Include="images\manHouse2.png" />
+    <Content Include="images\manipurmap.jpg" />
+    <Content Include="images\manLokHouse.png" />
+    <Content Include="images\newrule.gif" />
+    <Content Include="images\vline.png" />
+    <Content Include="sitemapFolder\userSR.sitemap" />
+    <Content Include="users\conerror.htm" />
+    <Content Include="users\hash\md5.js" />
+    <Content Include="users\hash\sha1.js" />
+    <Content Include="users\hash\showclock.js" />
+    <Content Include="images\sample.png" />
+    <Content Include="images\sample1.jpg" />
+    <Content Include="images\sample2.png" />
+    <Content Include="sitemapFolder\MAIN.sitemap" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="users\ChgPwd.aspx" />
+    <Content Include="users\Chgpwd_Success.aspx" />
+    <Content Include="users\errorsession.aspx" />
+    <Content Include="error_page.aspx" />
+    <Content Include="users\logout.aspx" />
+    <Content Include="users\printer.png" />
+    <Content Include="users\PrintStyleSheet.css" />
+    <Content Include="users\_CSC\BarCode.aspx" />
+    <Content Include="users\_CSC\CtlUserCSC.ascx" />
+    <Content Include="users\_CSC\frmLogTrl_csc.aspx" />
+    <Content Include="users\_CSC\Jama123.aspx" />
+    <Content Include="users\_CSC\JamaPrint123.aspx" />
+    <Content Include="users\_SCYREV\CtlUserSR.ascx" />
+    <Content Include="users\_SCYREV\frmLogTrl.aspx" />
+    <Content Include="users\_SCYREV\SRpage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_code\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49683</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,1 @@
+select newpattano,loccd,count(*) from uniplot where loccd = '0501003127' group by newpattano,loccd having count(*) >1
